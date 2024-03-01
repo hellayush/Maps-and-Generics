@@ -1,0 +1,76 @@
+Q1 - What is a Map in Java ?
+
+ANS - In Java, a Map is an interface that represents a collection of key-value pairs, where each key is associated with a corresponding value. Unlike List and Set, which store individual elements, a Map stores pairs of elements called entries, consisting of a key and its corresponding value.
+
+Q2 - What are commonly used implementations of Map in java ?
+
+ANS -  
+In Java, a Map is an interface that represents a collection of key-value pairs, where each key is associated with a corresponding value. It provides a way to store and retrieve elements based on their keys, similar to a dictionary in other programming languages.
+
+The Map interface defines methods for adding, removing, and retrieving elements, as well as for querying the size of the map and checking for the presence of keys or values. Some of the common methods provided by the Map interface include put(key, value), get(key), remove(key), containsKey(key), containsValue(value), and size().
+
+Q3 - What is the difference between HashMap and TreeMap ?
+
+ANS - The main differences between HashMap and TreeMap in Java lie in their underlying data structures, performance characteristics, and ordering guarantees:
+
+Underlying Data Structure:
+
+ * HashMap: Uses a hash table to store key-value pairs. It provides constant-time performance (O(1)) for basic operations like put(), get(), and remove() on average.
+ * TreeMap: Uses a red-black tree (self-balancing binary search tree) to store key-value pairs. It maintains its elements in sorted order according to the keys' natural ordering or a custom comparator provided at the time of creation. Basic operations like put(), get(), and remove() have a time complexity of O(log n).
+
+Ordering:
+
+ * HashMap: Does not guarantee any specific order of its elements. The order of elements may change as elements are added or removed.
+ * TreeMap: Guarantees that its elements will be sorted based on the keys' natural ordering or the custom comparator provided. It maintains the elements in sorted order, making it suitable for scenarios where ordered traversal of elements is required.
+
+Performance:
+
+ * HashMap: Offers better performance for basic operations like put(), get(), and remove() due to its constant-time complexity on average. However, performance may degrade in the worst-case scenario, such as when many elements have the same hash code, leading to hash collisions.
+ * TreeMap: Offers efficient performance for basic operations, albeit with slightly slower time complexity (O(log n)) compared to HashMap. However, it provides predictable and consistent performance regardless of the input data, making it suitable for scenarios where performance consistency is essential.
+
+
+Q4 - How to you check if any key exists in a map in java ?
+
+ANS - In Java, we can check if a key exists in a Map using the containsKey(Object key) method. This method returns true if the map contains a mapping for the specified key, and false otherwise. 
+
+Q5 - What is Generics in java ?
+
+ANS - Generics in Java is a feature introduced in Java 5 (also known as Java 1.5) that allows you to create classes, interfaces, and methods that operate on parametersized types. Generics provide a way to abstract over types and enable type-safe programming by allowing you to specify the type of objects that a class or method can work with without committing to a specific type at compile time.
+
+With generics, you can create classes, interfaces, and methods that can work with a variety of data types while ensuring type safety. This enables you to write reusable and flexible code that can be applied to different types of data without the need for explicit type casting or the risk of runtime type errors.
+
+Q6 - What are benefits of using Generics ?
+
+ANS - The main benefits of generics in Java include:
+
+ * Type Safety: Generics enable you to catch type errors at compile time rather than at runtime, which helps prevent errors and ensures code reliability.
+
+ * Code Reusability: Generics allow you to write reusable code that can operate on different types of data without the need for duplication or type-specific implementations.
+
+ * Abstraction: Generics provide a way to abstract over types, allowing you to create more generic and flexible classes, interfaces, and methods.
+
+ * Elimination of Type Casting: Generics eliminate the need for explicit type casting, making the code cleaner and more readable.
+
+Q7 - What is a generic class in Java ? 
+
+ANS - A generic class in Java is a class that is parameterized by one or more type parameters. These type parameters allow you to create classes that can work with a variety of data types without committing to a specific type at compile time.
+
+Q8 - What is a type parameter of a Java Generics ?
+
+ANS - A type parameter in Java generics is a placeholder for a specific type that is used to parameterize a generic class, interface, or method. Type parameters allow you to create classes, interfaces, and methods that can work with different types of data without committing to a specific type at compile time.
+
+Q9 - What is a Generic method in java ?
+
+ANS - 
+A generic method in Java is a method that is parameterized by one or more type parameters, similar to generic classes and interfaces. Generic methods allow you to write methods that can work with different types of data without committing to a specific type at compile time.
+
+The syntax for declaring a generic method in Java involves specifying one or more type parameters before the return type of the method. Here's the basic syntax for declaring a generic method: 
+public <T> returnType methodName(T parameter) {
+    // Method body
+}
+
+Q10 - What is the difference between ArrayList and ArrayList<T> ?
+
+ANS -  In Java, there is no difference between ArrayList and ArrayList<T>. Both refer to the same class, ArrayList, which is a part of the Java Collections Framework.
+
+The notation ArrayList<T> is often used to indicate that the ArrayList is parameterized with a specific type T. This is called using generics in Java. When you specify a type parameter T, it indicates that the ArrayList can only hold elements of that specific type T.
